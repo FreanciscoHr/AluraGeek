@@ -1,0 +1,91 @@
+.header{
+    display: flex;
+    align-items: center;
+    padding: 7px 0px;
+    position: fixed;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    gap: 4.75rem;
+}
+
+.header__container{
+    display: flex;
+    width: 70rem;
+    padding: 32px 8px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo__busqueda{
+    position: fixed;
+    left: -100vw;
+    top: 0;
+    width: 70vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.header__Search{
+    display: flex;
+    width: 393px;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 28px;
+    background-color: white;
+}
+
+.input__search{
+    border: none;
+    background: white;
+    display: flex;
+    align-items: flex-start;
+    flex: 1 0 0;
+}
+
+.icon__search{
+    width: 24px;
+    height: 24px;
+}
+
+.loginBtn{
+    display: flex;
+    width: 182px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border: 1px solid #2A7AE4;
+    color: #2A7AE4;
+    background-color: white;
+}
+
+@media (min-width: 900px){
+    .header {
+        grid-template-areas: "menu logo .";
+        height: 6.75rem;
+    }
+    
+    .header__container {
+        grid-area: logo;
+    }
+
+    .header__logo{
+        size: 1.5rem;
+    }
+    
+    .loginBtn{
+        size: 1.5rem;
+    }
+
+    .header__logo__busqueda{
+        justify-self: flex-start;
+        position: static;
+        width: fit-content;
+        height: fit-content;
+        grid-area: menu;
+    }
+}
